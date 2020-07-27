@@ -1,0 +1,320 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    background-color: #DCE3E9;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+section{
+    width: 100%;
+    margin: auto;
+}
+
+.inner-section{
+    max-width: 1000px;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 40px;
+    padding-bottom: 20px;
+}
+
+nav{
+    max-width: 1000px;
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: auto;
+}
+nav ul{
+    display: flex;
+    margin-top: 30px;
+
+}
+
+nav ul li{
+    list-style: none;
+    margin: auto 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #2E3336;
+    top: calc(50% - 20px/2);
+}
+.hamburger{
+    display: none;
+    margin-top: 20px;
+}
+.bar1, .bar2, .bar3{
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px;
+}
+.second-nav{
+    max-width: 1000px;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.search-box{
+    max-width: 300px;
+    margin-right: 10px;
+    position: relative;
+    top: -30px;
+}
+
+.search-box input{
+    padding: 10px;
+    padding-right: 50px;
+    border: none;
+    border: 1px solid #C8D3DC;
+    outline: none;
+    width: 100%;
+}
+.search-box input::placeholder{
+    color: #979797;    
+}
+
+.search-box i{
+    color: #9BAAB7;
+    font-size: 25px;
+    float: right;
+    top: 30px;
+    left: -10px;
+    position: relative;
+}
+
+.upload-btn a{
+    border: 1px solid #979797;
+    background-color: #2E3336;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0px 11px 14px -10px rgba(46, 51, 54, 0.848804);
+    border-radius: 5px;
+}
+
+.image-gallery-container{
+    max-width: 1000px;
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.image-gallery-box{
+    width: 100%;
+}
+
+
+
+/* Common style */
+.image-grid figure {
+	position: relative;
+	overflow: hidden;
+	margin: auto;
+    width: 100%;
+	background: #3085a3;
+	cursor: pointer;
+}
+
+.image-grid figure img {
+	position: relative;
+	display: block;
+	max-height: 100%;
+	width: 100%;
+	opacity: 0.8;
+}
+
+.image-grid figure figcaption {
+	padding: 2em;
+    color: #fff;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.image-grid figure figcaption::before,
+.image-grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.image-grid figure figcaption,
+.image-grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.image-grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+figcaption{
+    display: flex;
+    justify-content: space-between;
+}
+.image-grid figure h2 {
+	font-weight: 300;
+}
+
+.image-grid figure h2 span {
+	font-weight: 800;
+}
+
+.image-grid figure h2,
+.image-grid figure p {
+	margin: 0;
+}
+
+.image-grid figure p {
+	letter-spacing: 1px;
+	font-size: 10px;
+}
+
+figure.effect-zoe figcaption {
+	top: auto;
+	bottom: 0;
+	padding: 1em;
+    background: #000000;
+    height: 70px;
+    color: #ffffff;
+    opacity: 0.5;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+
+figure.effect-zoe h2 {
+    font-size: 16px;
+}
+
+figure.effect-zoe p.description {
+	position: absolute;
+	bottom: 8em;
+	padding: 2em;
+	color: #fff;
+	text-transform: none;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+	-webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+}
+
+figure.effect-zoe h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+}
+.icon-links{
+    font-size: 20px;
+
+}
+.icon-links img{
+    height: 25px;
+}
+
+.icon-eye::before {
+	content: '\e000';
+}
+
+.icon-paper-clip::before {
+	content: '\e001';
+}
+
+.icon-heart::before {
+	content: '\e024';
+}
+
+figure.effect-zoe h2 {
+	display: inline-block;
+}
+
+figure.effect-zoe:hover p.description {
+	opacity: 1;
+}
+
+figure.effect-zoe:hover figcaption,
+figure.effect-zoe:hover h2{
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-zoe:hover h2 {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+@media (max-width: 501px){
+    figure.effect-zoe h2 {
+        font-size: 12px;
+    }
+}
+@media (max-width: 600px){
+    .image-gallery-container{
+        grid-template-columns: 1fr 1fr;   
+    }
+}
+@media (max-width: 360px){
+    .second-nav{
+        flex-direction: column;
+    }
+}
+@media (max-width: 448px){
+    nav ul{
+        width: 60%;
+        height: 100vh;
+        background-color: #ffffff;
+        z-index: 1;
+        top: 40px;
+        left: -1000%;
+        display: block;
+        padding-top: 50px;
+        position: fixed;
+        transition: 0.5s ease-in-out;
+        -webkit-box-shadow: 2px 0px 14px -8px rgba(0,0,0,0.75);
+        -moz-box-shadow: 2px 0px 14px -8px rgba(0,0,0,0.75);
+        box-shadow: 2px 0px 14px -8px rgba(0,0,0,0.75);
+    }
+
+    nav ul.show-nav{
+        left: 18px;
+    }
+
+    nav ul li{
+        margin-bottom: 20px;
+    }
+    .hamburger{
+        display: block;
+    }
+    .search-box{
+        top: 0;
+    }
+    .upload-btn{
+        position: relative;
+        top: 30px;
+    }
+}
+
+
+
+
